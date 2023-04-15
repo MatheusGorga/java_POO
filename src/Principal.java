@@ -1,4 +1,6 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -9,6 +11,10 @@ public class Principal {
         meuFilme.setNome("John Wick");
         meuFilme.setAnoDeLancamento(2017);
         meuFilme.setDuracaoEmMinutos(120);
+        meuFilme.avalia(10);
+        meuFilme.avalia(8);
+        meuFilme.avalia(2);
+
 
         Filme outroFilme = new Filme();
         outroFilme.setNome("Avatar");
@@ -29,5 +35,16 @@ public class Principal {
         calculadora.inclui(outroFilme);
         calculadora.inclui(lost);
         System.out.println("Tempo total do filme = " + calculadora.getTempoTotal());
+
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizacoes(90);
+        filtro.filtra(episodio);
     }
 }
