@@ -4,7 +4,7 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.net.FileNameMap;
-import java.util.ArrayList;
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -34,6 +34,27 @@ public class PrincipalComListas {
             }
         }
 
+        List<String> buscaPorArtista = new LinkedList<>();
+        buscaPorArtista.add("paulo");
+        buscaPorArtista.add("Adam");
+        buscaPorArtista.add("Jaqueline");
+        buscaPorArtista.add("Matheus");
+
+        System.out.println("#############################################");
+
+        System.out.println(buscaPorArtista);
+
+        System.out.println("############### Depois do Collections.sort");
+        Collections.sort(buscaPorArtista);
+        System.out.println(buscaPorArtista);
+
+        System.out.println("############### Lista de titulos ordenados");
+        Collections.sort(lista);
+        System.out.println(lista);
+
+        System.out.println("############### Lista de titulos ordenados por ano");
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println(lista);
 
     }
 }

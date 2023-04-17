@@ -5,9 +5,11 @@ import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Principal {
     public static void main(String[] args) {
@@ -55,8 +57,10 @@ public class Principal {
         listaDeFilmes.add(outroFilme);
 
         System.out.println(listaDeFilmes.size());
-
         System.out.println(listaDeFilmes);
+
+
+
 
 
 
